@@ -486,7 +486,7 @@ def main():
 
     if args.local_rank in [-1, 0]:
         args.writer = SummaryWriter(f"results/{args.name}")
-        wandb.init(name=args.name, project='MPL', config=args)
+        wandb.init(name=args.name, entity="iitb_ssl", project='mpl', config=args)
 
     if args.seed is not None:
         set_seed(args)
